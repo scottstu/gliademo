@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Cortex Financial Demo</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/update-styles.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/fontello.css" rel="stylesheet">
+    <link href="css/table.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Merriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="css/dcf-responsive-table-5.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body onload="loggingToggle()">
+<!-- /.top-bar -->
+<div class="header-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 logo-login-button">
+                <!-- logo -->
+                <div class="logo">
+                    <img src="images/Cortex_v1_140x70px.png " alt="Cortex - Insurance Company Website Template">
+                </div>
+                <div class="login-section"></div>
+            </div>
+        </div>
+    </div>
+    <div class="navigation-2">
+        <div class="container" onclick="menuCloser()">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div id="navigation">
+                        <!-- navigation start-->
+                        <ul id="menu-options">
+                            <li class="active"><a href="index.html" title="Home page 3"  class="animsition-link">Home</a></li>
+                            <li onmouseover="menuHover('profileSettingsDrop')" onmouseout="menuHoverOut('profileSettingsDrop')" id="accountButton"><a href="cu-account-services.html" title="Account" class="animsition-link">Account Services</a>
+                                <ul id="profileSettingsDrop">
+                                    <li><a href="cu-change-password.html" title="Change Password" class="animsition-link dropdownLink" onmouseover="optionHover(this)" onmouseout="optionHoverOut(this)">Change Password</a></li>
+                                    <li><a href="cu-order-checks.html" title="Order Checks" class="animsition-link dropdownLink" onmouseover="optionHover(this)" onmouseout="optionHoverOut(this)">Order Checks</a></li>
+                                    <li><a href="cu-statements.html" title="Statements" class="animsition-link dropdownLink" onmouseover="optionHover(this)" onmouseout="optionHoverOut(this)">Statements</a></li>
+                                    <li><a href="cu-transactions.html" title="Transactions" class="animsition-link dropdownLink" onmouseover="optionHover(this)" onmouseout="optionHoverOut(this)">Transactions</a></li>
+                                </ul>
+                            </li>
+
+                            <li onmouseover="menuHover('cardsDrop')" onmouseout="menuHoverOut('cardsDrop')" id="cardButton"><a href="cu-card-services.html" title="Card" class="animsition-link">Card Services</a>
+                                <ul id="cardsDrop">
+                                    <li><a href="cu-freeze-card.html" title="Freeze Card" class="animsition-link dropdownLink" onmouseover="optionHover(this)" onmouseout="optionHoverOut(this)">Freeze Card</a></li>
+                                    <li><a href="cu-change-pin.html" title="Change Pin" class="animsition-link dropdownLink" onmouseover="optionHover(this)" onmouseout="optionHoverOut(this)">Change Pin</a></li>
+                                    <li><a href="cu-replace-card.html" title="Replace Card" class="animsition-link dropdownLink" onmouseover="optionHover(this)" onmouseout="optionHoverOut(this)">Replace Card</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li onmouseover="menuHover('payTransferDrop')" onmouseout="menuHoverOut('payTransferDrop')"><a href="cu-payments-transfers.html" class="animsition-link">Pay & Transfer</a>
+                                <ul id="payTransferDrop">
+                                    <li><a href="cu-transfer-money.html" title="Transfer Money" class="animsition-link" onmouseover="optionHover(this)" onmouseout="optionHoverOut(this)">Transfer Money</a></li>
+                                    <li><a href="cu-bill-pay.html" title="Bill Pay" class="animsition-link" onmouseover="optionHover(this)" onmouseout="optionHoverOut(this)">Bill Pay</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul id="language-list">
+                            <li onmouseover="menuHover('languageDrop')" onmouseout="menuHoverOut('languageDrop')" class="language-selector"><a href="#" title="Language" class="animsition-link">Language</a>
+                                <ul id="languageDrop">
+                                    <li>
+                                        <a onclick="toggleSpanish();" href="#" title="Spanish" id="spanishLocale" class="btn" onmouseover="optionHover(this)" onmouseout="optionHoverOut(this)">Spanish</a>
+                                        <a onclick="toggleEnglish();" href="#" title="English" id="englishLocale" class="btn" onmouseover="optionHover(this)" onmouseout="optionHoverOut(this)">English</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navigation start-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-header mobile-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="account-summary-credit-union.html">Account Summary</a></li>
+                        <li><a href="cu-account-services.html">Pay & Transfer</a></li>
+                        <li class="active">Bill Pay</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="bg-white pinside30">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-9 col-sm-12 col-12">
+                            <h1 class="page-title">Bill Pay</h1>
+                        </div>
+                        <div class="col-xl-8 col-lg-8 col-md-3 col-sm-12 col-12">
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="btn-action"> <a href="cu-add-payee.html" class="btn btn-default">Add New Payee</a> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="account-summary-back">
+    <!-- content start -->
+    <div class="container">
+        <table class="dcf-table dcf-table-responsive dcf-table-bordered dcf-table-striped dcf-w-100%">
+
+            <tr >
+                <th scope="col"><h3>Payee</h3></th>
+                <th scope="col"><h3>Pay From </h3></th>
+                <th scope="col"><h3>Amount</h3></th>
+
+            </tr>
+
+            <tr style="line-height: 50px; background-color:#EFEDED">
+                <th><h5>HSN Data Services</h5></th>
+                <th>
+                    <select name = "bank-account" class="form-control">
+                    <option value="" disabled selected hidden>Select</option>
+                    <option value = "checking">Unlimited Checking - *1005147891</option>
+                    <option value = "saving">Savings - *40044898</option>
+                    </select>
+                </th>
+                <th>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="number" class="form-control" placeholder="Amount">
+                    </div>
+                </th>
+            </tr>
+
+            <tbody>
+
+            <tr style="line-height: 50px;">
+                <th><h5>Lenik Electricity</h5></th>
+                <th>
+                    <select name = "bank-account"  class="form-control">
+                        <option value="" disabled selected hidden>Select</option>
+                        <option value = "checking">Unlimited Checking - *1005147891</option>
+                        <option value = "saving">Savings - *40044898</option>
+                    </select>
+                </th>
+                <th>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="number" class="form-control" placeholder="Amount">
+                    </div>
+                </th>
+
+            </tr>
+            <tr style="line-height:50px; background-color:#EFEDED">
+                <th><h5>G Phone</h5></th>
+                <th>
+                    <select name = "bank-account"  class="form-control">
+                        <option value="" disabled selected hidden>Select</option>
+                        <option value = "checking">Unlimited Checking - *1005147891</option>
+                        <option value = "saving">Savings - *40044898</option>
+                    </select>
+                </th>
+                <th>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="number" class="form-control"  placeholder="Amount">
+                    </div>
+                </th>
+            </tr>
+            <tr style="line-height:50px; ">
+                <th><h5>CV Module</h5></th>
+                <th>
+                    <select name = "bank-account"  class="form-control">
+                        <option value="" disabled selected hidden>Select</option>
+                        <option value = "checking">Unlimited Checking - *1005147891</option>
+                        <option value = "saving">Savings - *40044898</option>
+                    </select>
+                </th>
+                <th>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="number" class="form-control" id="input" name="transferAmount" placeholder="Amount">
+                    </div>
+                </th>
+
+            </tr>
+
+            </tbody>
+        </table>
+        <!-- Button -->
+        <div class="col-sm-12 col-12">
+            <button type="button" id = "pay" class="btn btn-default sm_cobrowsing_disabled_field"  onclick= "location.href = 'cu-confirm-bill-pay.html';">Pay Now</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- /.content end -->
+<div class="footer section-space100">
+    <!-- footer -->
+    <div class="container">
+        <hr class="dark-line">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="widget-text mt40">
+                    <!-- widget text -->
+                    <p>Our goal at Cortex Financial is to provide access to financial products that meet our customer's needs.</p>
+
+                </div>
+                <!-- /.widget text -->
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="widget-text mt40">
+                    <!-- widget text -->
+
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                            <p class="address-text"><span><i class="icon-placeholder-3 icon-1x"></i> </span>30 West 21st St, New York, NY 10504 </p>
+                        </div>
+                        <button class="omnibrowse-code-button btn btn-default" onclick="document.body.appendChild(document.createElement('sm-visitor-code'))">CoBrowse Code
+                        </button>
+                    </div>
+                </div>
+                <!-- /.widget text -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.footer -->
+<div class="tiny-footer">
+    <!-- tiny footer -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                <p>© Copyright 2021 | Cortex Financial</p>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 text-right">
+                <p>Terms of use | Privacy Policy</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.tiny footer -->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/menumaker.js"></script>
+<script type="text/javascript" src="js/format_currency.js"></script>
+<!-- sticky header -->
+<script type="text/javascript" src="js/jquery.sticky.js"></script>
+<script type="text/javascript" src="js/sticky-header.js"></script>
+<!-- SaleMove, This is where the magic happens! -->
+<script src="//api.salemove.com/salemove_integration.js"></script>
+<!-- Show Hide Language -->
+<script type="text/javascript" src="js/language-toggle.js"></script>
+<!--Close the menu in mobile view when opening languages-->
+<script type="text/javascript" src="js/mobile-menu.js"></script>
+<!--Get the billing data-->
+<script type="text/javascript" src="js/confirm-payment-data.js"></script>
+<!--Check if the user is logged in-->
+<script type="text/javascript" src="js/login-validation.js"></script>
+<script type="text/javascript">
+    const externalId = sessionStorage.getItem("username");
+    sm.getApi({version: 'v1'}).then(function(salemove) {
+        salemove.updateInformation({
+            externalId: externalId
+        }).then(function(){
+        })
+    });
+    </script>
+</body>
+</html>

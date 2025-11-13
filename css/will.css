@@ -1,0 +1,8 @@
+#customerservice-button { cursor: pointer; }
+#hide-button { cursor: pointer; }
+
+/*Some stylings to the buttons*/
+#customerservice-button, #smallbusiness-button, #phonenumber-button  { width: 300px; white-space: normal; color: #fff; border-radius: 5px; padding: 10px 50px; }
+#customerservice-button { background: #0703af; }
+#smallbusiness-button { background: #0703af; }
+#phonenumber-button { background: #0703af; display: none }

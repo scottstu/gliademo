@@ -1,0 +1,43 @@
+@charset "UTF-8";
+table th {
+    ;
+}
+
+ul.table-pagination {
+    padding: 0;
+    margin-top: 30px;
+    list-style: none;
+    text-align: center;
+}
+
+ul.table-pagination li {
+    display: inline-block;
+}
+
+ul.table-pagination li:first-child {
+    float: left;
+}
+
+ul.table-pagination li:last-child {
+    float: right;
+}
+
+ul.table-pagination li a {
+    display: inline-block;
+    height: 40px;
+    background-color: #e7e7e7;
+    text-align: center;
+    line-height: 40px;
+    padding: 0px 15px;
+    min-width: 40px;
+    color: #4a4a4a;
+    text-transform: uppercase;
+    font-size: 13px;
+    transition: all 0.5s;
+}
+
+ul.table-pagination li a:hover,
+ul.table-pagination li.active a {
+    background-color: #135497;
+    color: #fff;
+}
