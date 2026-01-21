@@ -335,11 +335,14 @@
     <!--Close the menu in mobile view when opening languages-->
     <script type="text/javascript" src="js/mobile-menu.js"></script>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
-    pageLanguage: 'en', 
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    pageLanguage: 'en',
+    // Add the line below to limit languages
+    includedLanguages: 'en,fr,es,de', 
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
   }, 'google_translate_element');
 }
 </script>
